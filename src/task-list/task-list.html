@@ -1,0 +1,31 @@
+@if (msg()) {
+  <div class="alert alert-success">{{ msg() }}</div>
+}
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Tiêu đề</th>
+      <th>Mô tả</th>
+      <th>Hạn</th>
+      <th>Trạng thái</th>
+      <th>Ưu tiên</th>
+      <th>Xóa</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (t of tasks(); track t.id ?? $index) {
+      <tr>
+        <td>{{ t.title }}</td>
+        <td>{{ t.description }}</td>
+        <td>{{ t.dueDate }}</td>
+        <td>{{ t.status ? 'Hoàn thành' : 'Chưa hoàn thành' }}</td>
+        <td>{{ t.priority }}</td>
+        <td>
+          <a [routerLink]="['/tasks/edit', t.id]" class="btn btn-sm btn-warning me-1">Sửa</a>
+          <button class="btn btn-sm btn-danger" (click)="remove(t)">Xóa</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

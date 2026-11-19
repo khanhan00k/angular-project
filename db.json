@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Hoàn thành bài kiểm tra Angular",
+      "description": "Làm đủ chức năng Router, danh sách, xóa và Reactive Form",
+      "dueDate": "2026-11-22",
+      "status": false,
+      "priority": "high"
+    },
+    {
+      "id": "2",
+      "title": "Dọn dẹp repo và kiểm tra API",
+      "description": "Kiểm tra GET, POST, PUT, DELETE trên JSON Server",
+      "dueDate": "2026-11-24",
+      "status": true,
+      "priority": "medium"
+    },
+    {
+      "title": "Chạy thử giao diện trên trình duyệt",
+      "description": "Kiểm tra điều hướng",
+      "dueDate": "2026-11-26",
+      "status": false,
+      "priority": "low",
+      "id": "3"
+    }
+  ]
+}
